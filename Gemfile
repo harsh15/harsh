@@ -60,7 +60,7 @@ gem 'devise'
 gem 'carrierwave'
 gem 'fog'
 # gem 'rmagick'
-gem 'mini_magick'
+# gem 'mini_magick'
 
 gem "font-awesome-rails"
 gem 'chosen-rails'
