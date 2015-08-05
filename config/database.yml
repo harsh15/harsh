@@ -51,7 +51,7 @@ development:
   #   log, notice, warning, error, fatal, and panic
   # Defaults to warning.
   #min_messages: notice
-
+ 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: harshvardhan_parihar_production
-  username: harshvardhan_parihar
-  password: <%= ENV['HARSHVARDHAN_PARIHAR_DATABASE_PASSWORD'] %>
+  # username: harshvardhan_parihar
+  # password: <%= ENV['HARSHVARDHAN_PARIHAR_DATABASE_PASSWORD'] %>
