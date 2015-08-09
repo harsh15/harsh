@@ -786,7 +786,7 @@ properly.
 
 /*  2. Misc -------------------------------------------------------- */
 
-.remove-bottom { margin-bottom: 0 !important; }
+/*.remove-bottom { margin-bottom: 0 !important; }
 .half-bottom { margin-bottom: 12px !important; }
 .add-bottom { margin-bottom: 24px !important; }
 .no-border { border: none; }
@@ -802,6 +802,6 @@ properly.
 	text-align: center !important;
 }
 
-
+*/
 
 
