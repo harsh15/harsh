@@ -403,7 +403,6 @@ dd { margin: 0 0 0 20px; }
 /* Pagination */
 .pagination {
    margin: 36px auto;
-   text-align: center;
 }
 .pagination ul li {
    display: inline-block;
@@ -513,7 +512,6 @@ input[type="button"].full-width {
 	width: 100%;
 	padding-left: 0 !important;
 	padding-right: 0 !important;
-	text-align: center;
 }
 
 /* Fix for odd Mozilla border & padding issues */
