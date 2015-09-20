@@ -24,6 +24,9 @@ module HarshvardhanParihar
     config.active_record.raise_in_transactional_callbacks = true
 
     config.autoload_paths << "#{Rails.root}/app/uploaders"
+    
+    config.assets.precompile << /(^[^_\/]|\/[^_])[^\/]*$/
+
 
     config.before_configuration do
       env_file = File.join(Rails.root, 'config', 'app.yml')
