@@ -72,7 +72,7 @@ gem 'bootstrap-kaminari-views'
 gem 'cancan'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
-# gem 'active_admin_editor', github: 'ejholmes/active_admin_editor'
+gem 'active_admin_editor', github: 'ejholmes/active_admin_editor'
 
 gem "nested_form"
 
@@ -86,7 +86,7 @@ gem 'mechanize'
 gem 'friendly_id', '~> 5.1.0'
 # gem 'simple_form'
 
-# gem 'cloudinary'
+gem 'cloudinary'
 gem "browser"
 
 # gem 'rails3_before_render', :git => 'git@github.com:codepodu/rails3_before_render.git'

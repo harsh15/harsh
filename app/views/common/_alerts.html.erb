@@ -1,0 +1,27 @@
+<% if flash.present? %>
+  <% flash.each do |name, msg| %>
+    <% alert_class = case name
+      when "success"
+        "success"
+      when "notice"
+        "info"
+      when "message"
+        "info"
+      else
+        "danger"
+    end %>
+    <div class="row">
+      <div class="col-md-12"><div class="alert alert-<%= alert_class %>" >
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <% if msg.class == Array %>
+        <% msg.each do |message| %>
+          <%= message.html_safe %>
+        <% end %>
+      <% else %>
+        <%= msg.html_safe %>
+      <% end %>
+    </div></div>
+    </div>
+
+  <% end %>
+<% end %>

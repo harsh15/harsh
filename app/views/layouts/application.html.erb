@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>HarshvardhanParihar</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>Shaadi Milaap | Welcome</title>
+  <%= render "common/css" %>
   <%= csrf_meta_tags %>
+  <%#= display_meta_tags :site => 'Harshvardhan Parihar', :reverse => true %>
 </head>
-<body>
 
-<%= yield %>
-
+<body class="header-fixed">
+  <%= yield :after_body %>
+  <div class="wrapper">
+    <%= render "common/header" -%>
+    <%= yield %>
+    <%= render "common/footer" -%>
+  </div>
+    <div id="popup"></div>
+    <%= render "common/js" %>
 </body>
+
 </html>

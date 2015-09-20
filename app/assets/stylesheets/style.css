@@ -1,0 +1,76 @@
+p,
+li,
+li a {
+   color: #555;
+}
+
+a {
+   text-decoration: none;
+}
+
+a,
+a:focus,
+a:hover,
+a:active {
+   outline: 0 !important;
+}
+a:focus {
+  text-decoration: none;
+}
+
+.wrapper {
+  background: #fff;
+}
+
+
+/*Blog Posts
+------------------------------------*/
+.posts .dl-horizontal a {
+	color: #555;
+}
+
+.posts .dl-horizontal {
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+
+.posts .dl-horizontal dt {
+	width: 60px;
+	float: left;
+}
+
+.posts .dl-horizontal dt img {
+	width: 60px;
+	height: 60px;
+	padding: 2px;
+	margin-top: 2px;
+	border: solid 1px #ddd;
+}
+
+.posts .dl-horizontal dd {
+	margin-left: 70px;
+}
+
+.posts .dl-horizontal dd p {
+	margin: 0;
+}
+
+.posts .dl-horizontal dd a {
+	font-size: 14px;
+	line-height: 16px !important;
+}
+
+.posts .dl-horizontal dd a:hover {
+	color: #18ba9b;
+	text-decoration: none;
+}
+
+.posts .dl-horizontal:hover dt img,
+.posts .dl-horizontal:hover dd a {
+	color: #18ba9b;
+	border-color: #18ba9b !important;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}

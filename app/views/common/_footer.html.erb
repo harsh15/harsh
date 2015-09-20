@@ -1,0 +1,78 @@
+
+<div class="footer-v4">
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- About -->
+                <div class="col-md-4 md-margin-bottom-40">
+                    <p>I am Film Maker, Screen Writer and Film Editor. I have a desire to tell stories. I like to write for comedy shows, inspirational stories. I like to make films.</p>
+                    <br>
+                    <ul class="list-unstyled address-list margin-bottom-20">
+                        <!-- <li><i class="fa fa-angle-right"></i>Near IIM Bangalore, Karnatka, India</li> -->
+                        <!-- <li><i class="fa fa-angle-right"></i>Phone: </li> -->
+                        <!-- <li><i class="fa fa-angle-right"></i>Email: </li> -->
+                    </ul>
+
+                    <ul class="list-inline shop-social">
+                        <li>
+                          <a href="https://www.facebook.com/HarshvardhanPariharPage" target="_blank">
+                            <i class="fb rounded-md fa fa-facebook"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://twitter.com/HarshParihar89" target="_blank"><i class="tw rounded-md fa fa-twitter"></i></a>
+                        </li>
+                        <!-- <li>
+                            <a href="#"><i class="gp rounded-md fa fa-google-plus"></i></a>
+                        </li> -->
+                        <li>
+                          <a href="https://www.youtube.com/channel/UC6YPrLTM-2xeqgQDzlwb9Cw" target="_blank">
+                            <i class="yt rounded-md fa fa-youtube"></i>
+                          </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End About -->
+
+                <!-- Simple List -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-6">
+                            <div class="posts">
+                                <div class="headline"><h2>Recent Blog Entries</h2></div>
+                                <% Blog.first(4).each do |blog| %>
+                                <dl class="dl-horizontal">
+                                  <% if(photo = blog.cover_photo).present? %>
+                                    <dt><%= link_to(image_tag(photo.photo_url(:thumb)), blog_path(blog)) -%></dt>
+                                    <dd>
+                                        <p><%= link_to(blog.title, blog_path(blog)) -%></p>
+                                    </dd>
+                                  <% end %>
+                                </dl>
+                                <% end %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-3">
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-6">
+                            <!-- <h2 class="thumb-headline">Explore</h2> -->
+                            <ul class="list-unstyled simple-list margin-bottom-20">
+                                <li><%#= link_to "Blogs", blogs_path -%></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-12 col-xs-6">
+                            <!-- <h2 class="thumb-headline">Company</h2> -->
+                            <ul class="list-unstyled simple-list">
+                                <li><%#= link_to "About Harshvardhan Parihar", about_us_path -%></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Simple List -->
+            </div><!--/end row-->
+        </div><!--/end continer-->
+    </div><!--/footer-->
+</div>

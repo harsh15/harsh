@@ -1,0 +1,67 @@
+<% content_for :css do %>
+<%= stylesheet_link_tag 'blogs' %>
+<% end %>
+
+    <!--=== Content Part ===-->
+    <div class="container content">
+      <div class="row blog-page blog-item">
+            <!-- Left Sidebar -->
+          <div class="col-md-8 md-margin-bottom-60">
+                <!--Blog Post-->
+                <div class="blog margin-bottom-40">
+                    <h2><%= @blog.title -%></h2>
+                    <div class="blog-post-tags">
+                        <ul class="list-unstyled list-inline blog-info">
+                            <li><i class="fa fa-calendar"></i> <%= @blog.publish_date.strftime("%B %d, %Y") -%></li>
+                            <li><i class="fa fa-comments"></i> <a href="#comments">Comments</a></li>
+                        </ul>
+                    </div>
+                    <%= render partial: "common/social_share" -%>
+                    <hr>
+                    <% if @blog.video_url.present? %>
+                    <div class="blog-img">
+                      <iframe width="100%" height="515" src="//www.youtube.com/embed/<%= @blog.video_url -%>" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <% elsif @blog.cover_photo.present? %>
+                      <div class="blog-img">
+                        <%= resp_image_tag(@blog.cover_photo.photo, { xs: "300x200",sm: "600x400" }, { class: "img-responsive", crop: :fill, gravity: :faces }) %>
+                      </div>
+                    <% end %>
+                    <p><%= @blog.description.html_safe %></p>
+                </div>
+                <!--End Blog Post-->
+
+              <hr>
+                <%= render partial: "common/social_share" -%>
+              <hr>
+              <!-- Recent Comments -->
+              <div id="comments" class="fb-comments" data-href="<%= blog_url(@blog) -%>" data-numposts="3" data-colorscheme="light"></div>
+
+              <hr>
+
+            </div>
+            <!-- End Left Sidebar -->
+
+            <!-- Right Sidebar -->
+            <div class="col-md-4 magazine-page">
+              <% if false %>
+                <!-- Search Bar -->
+                <div class="headline headline-md"><h2>Search</h2></div>
+                <div class="input-group margin-bottom-40">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-btn">
+                        <button class="btn-u" type="button">Go</button>
+                    </span>
+                </div>
+                <!-- End Search Bar -->
+              <% end %>
+
+              <%= render "blogs/recent_blogs" -%>
+
+              <%= render "common/facebook_like" -%>
+
+            </div>
+            <!-- End Right Sidebar -->
+        </div><!--/row-->
+    </div><!--/container-->
+    <!--=== End Content Part ===-->

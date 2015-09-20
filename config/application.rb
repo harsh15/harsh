@@ -22,5 +22,17 @@ module HarshvardhanParihar
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.autoload_paths << "#{Rails.root}/app/uploaders"
+
+    config.before_configuration do
+      env_file = File.join(Rails.root, 'config', 'app.yml')
+      YAML.load(File.open(env_file))[Rails.env].each do |key, value|
+        value.each do |value_key, value_value|
+          ENV["#{key}_#{value_key}"] = value_value
+        end
+      end if File.exists?(env_file)
+    end
+    
   end
 end
