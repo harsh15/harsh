@@ -1,14 +1,4 @@
 GIT
-  remote: git://github.com/Compass/compass-rails.git
-  revision: 3e88f991150ffa39b0a539dffb3326248d18e6ad
-  branch: master
-  specs:
-    compass-rails (2.0.4)
-      compass (~> 1.0.0)
-      sass-rails (< 5.1)
-      sprockets (< 2.13)
-
-GIT
   remote: git://github.com/ejholmes/active_admin_editor.git
   revision: 86f964be3071cd938c3cd17ad00df94ece3a50c0
   specs:
@@ -165,6 +155,10 @@ GEM
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
+    compass-rails (2.0.5)
+      compass (~> 1.0.0)
+      sass-rails (< 5.1)
+      sprockets (< 2.13)
     coolline (0.5.0)
       unicode_utils (~> 1.4)
     daemons (1.2.3)
@@ -425,7 +419,7 @@ GEM
       activesupport (>= 3.0)
       i18n
       polyamorous (~> 1.2)
-    rb-fsevent (0.9.5)
+    rb-fsevent (0.9.6)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     rdoc (4.2.0)
@@ -532,7 +526,6 @@ DEPENDENCIES
   chosen-rails
   cloudinary
   coffee-rails (~> 4.1.0)
-  compass-rails!
   devise
   fog
   font-awesome-rails
