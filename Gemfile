@@ -7,7 +7,6 @@ gem 'rails', '4.2.0'
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-# gem 'compass-rails', github: "Compass/compass-rails", branch: "master"
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -73,6 +72,7 @@ gem 'cancan'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'active_admin_editor', github: 'ejholmes/active_admin_editor'
+gem 'compass-rails', github: "Compass/compass-rails", branch: "master"
 
 gem "nested_form"
 
