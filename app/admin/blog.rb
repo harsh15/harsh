@@ -17,7 +17,7 @@ ActiveAdmin.register Blog do
     f.inputs "blogs" do
       f.input :title
       f.input :short_description
-      f.input :description, as: :html_editor
+      f.input :description#, as: :html_editor
       f.input :publish_date, as: :date_picker
       f.input :status, as: :select, collection: Blog::statuses.keys
       f.input :video_url
