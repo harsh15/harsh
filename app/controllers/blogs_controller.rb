@@ -1,5 +1,9 @@
 class BlogsController < InheritedResources::Base
-    
+
+  def model
+    @blog
+  end
+        
   def index
     @blogs = Blog.page(params[:page]).per(10)
     recent_blogs

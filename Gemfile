@@ -89,7 +89,7 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'cloudinary'
 gem "browser"
 
-# gem 'rails3_before_render', :git => 'git@github.com:codepodu/rails3_before_render.git'
-# gem 'meta-tags'
-# gem "rails-settings-cached", "0.4.1"
+gem 'rails3_before_render', :git => 'git@github.com:codepodu/rails3_before_render.git'
+gem 'meta-tags'
+gem "rails-settings-cached", "0.4.1"
 
