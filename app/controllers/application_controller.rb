@@ -2,12 +2,11 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-  before_render :prepare_meta_tags, :except => [:destroy, :update]
+  # after_filter :prepare_meta_tags, :except => [:destroy, :update]
 
   def prepare_meta_tags
     setting_name = "#{params[:controller].gsub("/", ".")}.#{action_name}"
     val = setting_value("title", setting_name)
-    logger.info("\n\n 11 setting name = #{setting_name}, val = #{val} \n\n")
     set_meta_tags :title => setting_value("title", setting_name),
                   :description => setting_value("meta.description", setting_name),
                   :keywords => setting_value("meta.keywords", setting_name),
