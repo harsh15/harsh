@@ -27,13 +27,6 @@ GIT
       sass-rails
 
 GIT
-  remote: git://github.com/kpumuk/meta-tags.git
-  revision: 06db746666b11aa5a40323883b0751b8d232b42a
-  specs:
-    meta-tags (2.1.0.dev)
-      actionpack (>= 3.0.0)
-
-GIT
   remote: git://github.com/nixme/jazz_hands.git
   revision: 5e4b48f145883ecb14b55bf04eacc28ac9662676
   branch: bring-your-own-debugger
@@ -336,6 +329,8 @@ GEM
       nokogiri (~> 1.4)
       ntlm-http (~> 0.1, >= 0.1.1)
       webrobots (>= 0.0.9, < 0.2)
+    meta-tags (2.0.0)
+      actionpack (>= 3.0.0)
     method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile (0.6.2)
@@ -540,7 +535,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   mechanize
-  meta-tags!
+  meta-tags
   money-rails
   nested_form
   omniauth

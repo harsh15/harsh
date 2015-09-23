@@ -2,28 +2,28 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-  # after_filter :prepare_meta_tags, :except => [:destroy, :update]
+  before_render :prepare_meta_tags, :except => [:destroy, :update]
 
-  # def prepare_meta_tags
-  #   setting_name = "#{params[:controller].gsub("/", ".")}.#{action_name}"
-  #   val = setting_value("title", setting_name)
-  #   set_meta_tags :title => setting_value("title", setting_name),
-  #                 :description => setting_value("meta.description", setting_name),
-  #                 :keywords => setting_value("meta.keywords", setting_name),
-  #                 :og => {
-  #                   :title => setting_value("og.title", setting_name, "title"),
-  #                   :description => setting_value("og.description", setting_name, "meta.description"),
-  #                   :image => setting_value("og.image", setting_name),
-  #                   :url => setting_value("og.url", setting_name),
-  #                   :type => setting_value("og.type", setting_name)
-  #                 },
-  #                 :twitter => {
-  #                   :card => setting_value("twitter.card", setting_name),
-  #                   :title => setting_value("twitter.title", setting_name, "title"),
-  #                   :description => setting_value("twitter.description", setting_name, "meta.description"),
-  #                   "image:src" => setting_value("twitter.image", setting_name, "og.image")
-  #                 }
-  # end
+  def prepare_meta_tags
+    setting_name = "#{params[:controller].gsub("/", ".")}.#{action_name}"
+    val = setting_value("title", setting_name)
+    set_meta_tags :title => setting_value("title", setting_name),
+                  :description => setting_value("meta.description", setting_name),
+                  :keywords => setting_value("meta.keywords", setting_name),
+                  :og => {
+                    :title => setting_value("og.title", setting_name, "title"),
+                    :description => setting_value("og.description", setting_name, "meta.description"),
+                    :image => setting_value("og.image", setting_name),
+                    :url => setting_value("og.url", setting_name),
+                    :type => setting_value("og.type", setting_name)
+                  },
+                  :twitter => {
+                    :card => setting_value("twitter.card", setting_name),
+                    :title => setting_value("twitter.title", setting_name, "title"),
+                    :description => setting_value("twitter.description", setting_name, "meta.description"),
+                    "image:src" => setting_value("twitter.image", setting_name, "og.image")
+                  }
+  end
 
   def setting_value(base_setting, setting_name, alt_base_setting = nil)
     setting = "#{base_setting}.#{setting_name}"
