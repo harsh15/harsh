@@ -20,5 +20,13 @@ class BlogsController < InheritedResources::Base
     @recent_blogs = Blog.all
   end
 
+  def prepare_meta_tags
+    set_meta_tags :title => "title harsh 1",
+                  :description => "description 1",
+                  :og => {
+                    :title => "harsh title",
+                  }
+  end
+
 end
 
