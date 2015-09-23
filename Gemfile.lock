@@ -43,6 +43,12 @@ GIT
       pry-stack_explorer (~> 0.4.9)
       railties (>= 3.0, < 5.0)
 
+GIT
+  remote: git@github.com:codepodu/rails3_before_render.git
+  revision: 82419eea634fe196f21304e0fe4d9a6ad1911ce7
+  specs:
+    rails3_before_render (0.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -542,6 +548,7 @@ DEPENDENCIES
   pg
   rails (= 4.2.0)
   rails-settings-cached (= 0.4.1)
+  rails3_before_render!
   rspec-rails (~> 3.0.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
