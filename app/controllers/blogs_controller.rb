@@ -7,7 +7,8 @@ class BlogsController < InheritedResources::Base
   def index
     @blogs = Blog.page(params[:page]).per(10)
     recent_blogs
-    prepare_meta_tags
+    # prepare_meta_tags
+    set_meta_tags title: 'Member Login'
   end
 
   def show

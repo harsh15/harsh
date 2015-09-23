@@ -90,6 +90,6 @@ gem 'cloudinary'
 gem "browser"
 
 # gem 'rails3_before_render', :git => 'git@github.com:codepodu/rails3_before_render.git'
-gem 'meta-tags'
+gem 'meta-tags', require: 'meta_tags'
 gem "rails-settings-cached", "0.4.1"
 
