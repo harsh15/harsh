@@ -65,30 +65,30 @@ gem 'fog'
 # gem 'mini_magick'
 
 gem "font-awesome-rails"
-gem 'chosen-rails'
+# gem 'chosen-rails'
 
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
-gem 'cancan'
+# gem 'cancan'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'active_admin_editor', github: 'ejholmes/active_admin_editor'
 # gem 'active_admin_editor'
 
-gem "nested_form"
+# gem "nested_form"
 
 gem 'money-rails'
 gem 'uuidtools', '~> 2.1.4'
 
-gem 'omniauth'
+# gem 'omniauth'
 
-gem 'mechanize'
+# gem 'mechanize'
 
 gem 'friendly_id', '~> 5.1.0'
 # gem 'simple_form'
 
 gem 'cloudinary'
-gem "browser"
+# gem "browser"
 
 gem 'rails3_before_render', :git => 'git@github.com:codepodu/rails3_before_render.git'
 gem 'meta-tags'
