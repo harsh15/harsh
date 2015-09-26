@@ -88,7 +88,7 @@ gem 'friendly_id', '~> 5.1.0'
 # gem 'simple_form'
 
 gem 'cloudinary'
-# gem "browser"
+gem "browser"
 
 gem 'rails3_before_render', :git => 'git@github.com:codepodu/rails3_before_render.git'
 gem 'meta-tags'
