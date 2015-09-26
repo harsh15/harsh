@@ -8,7 +8,7 @@ gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'compass-rails', github: "Compass/compass-rails", branch: "master"
-
+ 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -62,34 +62,55 @@ gem 'devise'
 gem 'carrierwave'
 gem 'fog'
 # gem 'rmagick'
-# gem 'mini_magick'
+gem 'mini_magick'
 
 gem "font-awesome-rails"
-# gem 'chosen-rails'
+gem 'chosen-rails'
 
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
-# gem 'cancan'
+gem 'cancan'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'active_admin_editor', github: 'ejholmes/active_admin_editor'
 
-# gem "nested_form"
+# gem 'elasticsearch-model'
+# gem 'elasticsearch-rails'
+ 
+gem 'bootstrap_form'
+gem "nested_form"
+
+# gem "koala", "~> 1.10.0rc"
+
+# gem 'mailboxer'
+# gem "private_pub"
 
 gem 'money-rails'
 gem 'uuidtools', '~> 2.1.4'
 
-# gem 'omniauth'
+#for reports
+# gem "chartkick"
+# gem 'lazy_high_charts'
 
-# gem 'mechanize'
+# social authentication
+# gem 'koala'
+gem 'omniauth'
+# gem 'omniauth-facebook'
+# gem 'omniauth-twitter'
+# gem 'omniauth-linkedin'
+# gem 'omniauth-github'
+# gem 'omniauth-google-oauth2'
+
+# gem 'bootstrap-slider-rails'
+
+gem 'mechanize'
 
 gem 'friendly_id', '~> 5.1.0'
-# gem 'simple_form'
+gem 'simple_form'
 
 gem 'cloudinary'
-# gem "browser"
+gem "browser"
 
 gem 'rails3_before_render', :git => 'git@github.com:codepodu/rails3_before_render.git'
 gem 'meta-tags'
 gem "rails-settings-cached", "0.4.1"
-
