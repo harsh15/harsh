@@ -1,12 +1,13 @@
 ActiveAdmin.register Blog do
 
-  permit_params :title, :short_description, :description, :publish_date, :status, :video_url, photos_attributes: ["id", "caption", "description", "photo_type", "status", "photo", "_destroy"]
+  permit_params :title, :short_description, :description, :publish_date, :status, :video_url, :blog_category_id, photos_attributes: ["id", "caption", "description", "photo_type", "status", "photo", "_destroy"]
 
   index do
     column :id
     column :title
     column :short_description
     column :publish_date
+    column :blog_category
     column :status
     column :video_url
     actions
@@ -19,6 +20,7 @@ ActiveAdmin.register Blog do
       f.input :short_description
       f.input :description, as: :html_editor
       f.input :publish_date, as: :date_picker
+      f.input :blog_category
       f.input :status, as: :select, collection: Blog::statuses.keys
       f.input :video_url
       f.has_many :photos  do |p|
@@ -44,6 +46,7 @@ ActiveAdmin.register Blog do
         blog.description.html_safe
       end
       row :publish_date
+      row :blog_category
       row :status
       row :video_url
       row :photos
