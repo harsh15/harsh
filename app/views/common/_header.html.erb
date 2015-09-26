@@ -29,7 +29,7 @@
       </div>
 
       <div class="collapse navbar-collapse navbar-responsive-collapse">
-        <ul class="nav navbar-nav" style="width: 600px; float:left;">
+        <ul class="nav navbar-nav">
           <li><%= link_to "Home", root_path -%></li>
           <li><%= link_to "Blogs", blogs_path -%></li>
                         <li>
@@ -41,7 +41,9 @@
                           <a href="https://twitter.com/HarshParihar89" target="_blank"><i class="tw rounded-md fa fa-twitter"></i></a>
                         </li>
         </ul>
+        <% if false %>
         <div class="fb-page" data-href="https://www.facebook.com/HarshvardhanPariharPage" data-width="290" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/HarshvardhanPariharPage"><a href="https://www.facebook.com/HarshvardhanPariharPage">Harshvardhan Parihar</a></blockquote></div></div>
+        <% end %>
       </div>
 
     </div>
