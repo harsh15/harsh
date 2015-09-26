@@ -73,7 +73,6 @@ gem 'bootstrap-kaminari-views'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'active_admin_editor', github: 'ejholmes/active_admin_editor'
-# gem 'active_admin_editor'
 
 # gem "nested_form"
 
