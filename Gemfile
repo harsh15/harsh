@@ -7,8 +7,8 @@ gem 'rails', '4.2.0'
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-gem 'compass-rails', github: "Compass/compass-rails", branch: "master"
- 
+gem "font-awesome-rails"
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -32,11 +32,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 group :development do
-  gem 'capistrano'
   gem 'capistrano-rails'
-  gem 'capistrano-bundler'
   gem 'capistrano-rvm'
   gem 'capistrano3-unicorn'
 end
@@ -58,59 +55,36 @@ group :development, :test do
   gem 'thin'
 end
 
-gem 'devise'
-gem 'carrierwave'
-gem 'fog'
-# gem 'rmagick'
-gem 'mini_magick'
 
-gem "font-awesome-rails"
-gem 'chosen-rails'
-
-gem 'kaminari'
-gem 'bootstrap-kaminari-views'
-gem 'cancan'
-
-gem 'activeadmin', github: 'gregbell/active_admin'
-gem 'active_admin_editor', github: 'ejholmes/active_admin_editor'
-
-# gem 'elasticsearch-model'
-# gem 'elasticsearch-rails'
- 
-gem 'bootstrap_form'
-gem "nested_form"
-
-# gem "koala", "~> 1.10.0rc"
-
-# gem 'mailboxer'
-# gem "private_pub"
-
-gem 'money-rails'
-gem 'uuidtools', '~> 2.1.4'
-
-#for reports
-# gem "chartkick"
-# gem 'lazy_high_charts'
-
-# social authentication
-# gem 'koala'
-gem 'omniauth'
-# gem 'omniauth-facebook'
-# gem 'omniauth-twitter'
-# gem 'omniauth-linkedin'
-# gem 'omniauth-github'
-# gem 'omniauth-google-oauth2'
-
-# gem 'bootstrap-slider-rails'
-
-gem 'mechanize'
-
-gem 'friendly_id', '~> 5.1.0'
-gem 'simple_form'
-
-gem 'cloudinary'
-gem "browser"
+gem "devise"
+gem 'activeadmin', github: 'activeadmin'
 
 gem 'rails3_before_render', :git => 'git@github.com:codepodu/rails3_before_render.git'
 gem 'meta-tags'
 gem "rails-settings-cached", "0.4.1"
+gem "kaminari"
+
+gem 'carrierwave'
+gem 'mini_magick'
+gem "fog"
+
+gem 'active_admin_editor', github: 'ejholmes/active_admin_editor'
+
+gem 'friendly_id', '~> 5.1.0'
+gem 'bootstrap-kaminari-views'
+
+gem "omniauth"
+gem 'omniauth-oauth2'
+gem "omniauth-facebook"
+# gem 'omniauth-google-oauth2'
+
+# gem 'simple_form', '~> 3.1.0.rc1', github: 'plataformatec/simple_form', branch: 'master'
+
+gem "countries"
+
+
+# gem 'resque', :require => "resque/server"
+
+
+
+
