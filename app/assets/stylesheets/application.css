@@ -18,5 +18,6 @@
  *= require footer
  *= require app
  *= require style
+//= require active_admin/editor/wysiwyg 
  */
 
