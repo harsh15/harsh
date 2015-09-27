@@ -8,5 +8,9 @@ class Blog < ActiveRecord::Base
   accepts_nested_attributes_for :photos, :allow_destroy => true
   has_one :cover_photo, -> { where(photo_type: Photo::COVER) }, :as => :origin, :class_name => "Photo"
   enum status: [ :not_published, :published ]
+	
+  def should_generate_new_friendly_id?
+    slug.blank? || title_changed?
+  end
 
 end
