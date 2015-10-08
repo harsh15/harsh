@@ -5,7 +5,7 @@ class BlogsController < InheritedResources::Base
   end
         
   def index
-    @blogs = Blog.page(params[:page]).per(10)
+    @blogs = Blog.recent.page(params[:page]).per(10)
     recent_blogs
   end
 
@@ -15,7 +15,7 @@ class BlogsController < InheritedResources::Base
   end
 
   def recent_blogs
-    @recent_blogs = Blog.all
+    @recent_blogs = Blog.recent.limit(4)
   end
 
 end
