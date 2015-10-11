@@ -2,7 +2,7 @@
   <div class="headline headline-md"><h2>Recent Blogs</h2></div>
   <% @recent_blogs.each do |blog| %>
   <dl class="dl-horizontal">
-    <dt><%= link_to(image_tag(blog.cover_photo.photo_url(:thumb)), blog_path(blog)) -%></dt>
+    <dt><%= link_to(image_tag(blog.cover_photo.photo_url(:thumb)), blog_path(blog)) if blog.cover_photo.present? -%></dt>
     <dd>
       <p><%= link_to(blog.title, blog_path(blog)) -%></p>
     </dd>

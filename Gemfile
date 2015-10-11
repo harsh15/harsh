@@ -94,3 +94,4 @@ gem 'rails3_before_render', :git => 'git@github.com:codepodu/rails3_before_rende
 gem 'meta-tags'
 gem "rails-settings-cached", "0.4.1"
 
+gem "breadcrumbs_on_rails"

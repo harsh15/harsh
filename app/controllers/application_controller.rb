@@ -46,4 +46,8 @@ class ApplicationController < ActionController::Base
     arr.join(".")
   end
   
+  def recent_blogs
+    @recent_blogs = Blog.recent.limit(4)
+  end
+
 end
