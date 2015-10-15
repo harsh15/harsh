@@ -10,7 +10,7 @@
                     <%= resp_image_tag(blog.cover_photo.photo, { sm: "300x240" }, { class: "img-responsive", crop: :fill, gravity: :faces }) if blog.cover_photo.present? %>
                     </div>
                     <div class="col-md-8">
-                        <h2><%= blog.title %></h2>
+                        <h2><%= link_to(blog.title, blog_url(blog)) -%></h2>
                         <ul class="list-unstyled list-inline blog-info">
                             <li><i class="fa fa-calendar"></i> <%= blog.publish_date.strftime("%B %d, %Y") %></li>
                         </ul>
