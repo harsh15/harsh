@@ -9,6 +9,14 @@ module ApplicationHelper
     cl_image_tag(photo, options)
   end
 
+  def authentic_user?
+    @user == current_user
+  end  
+
+  def subdomain_avilable?
+    SubDomain::NAMES.include?(request.subdomain)
+  end
+
 private
 
   def best_size(available_sizes, sizes_by_preference)

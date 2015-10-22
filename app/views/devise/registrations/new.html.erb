@@ -1,0 +1,7 @@
+<% if subdomain_avilable? %>
+<div class="container content">
+  <div class="row">
+    <%= render partial: "users/new_#{request.subdomain}" -%>
+  </div><!--/row-->
+</div><!--/container-->
+<% end %>
