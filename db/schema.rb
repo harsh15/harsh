@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151017053743) do
+ActiveRecord::Schema.define(version: 20151023165247) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,6 +70,23 @@ ActiveRecord::Schema.define(version: 20151017053743) do
 
   add_index "blogs", ["slug"], name: "index_blogs_on_slug", unique: true, using: :btree
 
+  create_table "cities", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "country_id"
+    t.integer  "state_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "cities", ["country_id"], name: "index_cities_on_country_id", using: :btree
+  add_index "cities", ["state_id"], name: "index_cities_on_state_id", using: :btree
+
+  create_table "countries", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
     t.integer  "sluggable_id",              null: false
@@ -120,6 +137,15 @@ ActiveRecord::Schema.define(version: 20151017053743) do
 
   add_index "settings", ["thing_type", "thing_id", "var"], name: "index_settings_on_thing_type_and_thing_id_and_var", unique: true, using: :btree
 
+  create_table "states", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "country_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "states", ["country_id"], name: "index_states_on_country_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "subdomain",              default: "", null: false
@@ -140,14 +166,19 @@ ActiveRecord::Schema.define(version: 20151017053743) do
     t.string   "phone",                  default: "", null: false
     t.string   "gender",                 default: "", null: false
     t.date     "date_of_birth"
-    t.string   "location",               default: "", null: false
     t.string   "interested_in",          default: "", null: false
     t.string   "prefered_language",      default: "", null: false
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "country_id"
+    t.integer  "state_id"
+    t.integer  "city_id"
   end
 
   add_index "users", ["email", "subdomain"], name: "index_users_on_email_and_subdomain", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "cities", "countries"
+  add_foreign_key "cities", "states"
+  add_foreign_key "states", "countries"
 end

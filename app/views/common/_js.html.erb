@@ -4,7 +4,14 @@
 <%= render :partial => "common/ga" -%>
 
 <script type="text/javascript">
-	// jQuery(document).ready(function() {
-	//     App.init();
-	// });
+$(document).ready(function() {
+  return $('#user_state_id').change(function() {
+    var options;
+    if ($(this).data('options') === void 0) {
+      $(this).data('options', $('#user_city_id option').clone());
+    }
+    options = $(this).data('options').filter('[class=' + 'state_' + $(this).val() + ']');
+    $('#user_city_id').html(options);
+  });
+});
 </script>

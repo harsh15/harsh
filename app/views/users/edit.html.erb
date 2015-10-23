@@ -14,9 +14,21 @@
       </div>
       <br>
 
+
       <div class="field">
-        <%= f.label :location %><br />
-        <%= f.text_field :location %>
+        <%= f.label :state_id %><br />
+        <%= f.collection_select(:state_id, State.all, :id, :name) %>
+      </div>
+      <br>
+
+      <div class="field">
+        <%= f.label :city_id %><br />
+        <%#= f.collection_select(:city_id, City.all, :id, :name, {}, {class: "harsh"}) %>
+        <%= f.select(:city_id) do %>
+          <% City.all.each do |c| -%>
+            <%= content_tag(:option, c.name, value: c.id, class: "state_#{c.state_id}", selected: @user.try(:city_id) == c.id) %>
+          <% end %>
+        <% end %>        
       </div>
       <br>
 
