@@ -10,15 +10,13 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    if movies_subdomain?
+    if resource.is_a?(AdminUser)
+      admin_dashboard_url()
+    elsif request.subdomain.present?
       user_url(resource, subdomain: request.subdomain)
     else
       root_url()
     end  
-  end  
-
-  def movies_subdomain?
-    request.subdomain == "movies"
   end  
 
   def prepare_meta_tags
