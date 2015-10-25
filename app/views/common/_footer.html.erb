@@ -42,9 +42,9 @@
                                 <% Blog.last(3).each do |blog| %>
                                 <dl class="dl-horizontal">
                                   <% if(photo = blog.cover_photo).present? %>
-                                    <dt><%= link_to(image_tag(photo.photo_url(:thumb)), blog_path(blog)) -%></dt>
+                                    <dt><%= link_to(image_tag(photo.photo_url(:thumb)), blog_url(blog, subdomain: false)) -%></dt>
                                     <dd>
-                                        <p><%= link_to(blog.title, blog_path(blog)) -%></p>
+                                        <p><%= link_to(blog.title, blog_url(blog, subdomain: false)) -%></p>
                                     </dd>
                                   <% end %>
                                 </dl>

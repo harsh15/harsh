@@ -1,7 +1,12 @@
 <% if subdomain_avilable? %>
 <div class="container content">
   <div class="row">
-    <%= render partial: "users/new_#{request.subdomain}" -%>
+    <div class="col-md-8"> 
+      <%= render partial: "users/new_#{request.subdomain}" -%>
+    </div> 
+    <div class="col-md-4"> 
+      <%= render "common/social_media" -%>
+    </div>      
   </div><!--/row-->
 </div><!--/container-->
 <% end %>
