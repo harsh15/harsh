@@ -9,6 +9,18 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) {|u| u.permit(:name, :email, :phone, :gender, :date_of_birth, :city_id, :state_id, :country_id, :interested_in, :prefered_language, :subdomain, :password, :password_confirmation)}
   end
 
+  def after_sign_in_path_for(resource)
+    if movies_subdomain?
+      user_url(resource, subdomain: request.subdomain)
+    else
+      root_url()
+    end  
+  end  
+
+  def movies_subdomain?
+    request.subdomain == "movies"
+  end  
+
   def prepare_meta_tags
     setting_name = "#{params[:controller].gsub("/", ".")}.#{action_name}"
     val = setting_value("title", setting_name)
