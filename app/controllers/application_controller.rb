@@ -22,6 +22,7 @@ class ApplicationController < ActionController::Base
   def prepare_meta_tags
     setting_name = "#{params[:controller].gsub("/", ".")}.#{action_name}"
     val = setting_value("title", setting_name)
+    puts "\n\n 11 setting_name = #{setting_name} \n\n"
     set_meta_tags :title => setting_value("title", setting_name),
                   :description => setting_value("meta.description", setting_name),
                   :keywords => setting_value("meta.keywords", setting_name),
@@ -30,7 +31,8 @@ class ApplicationController < ActionController::Base
                     :description => setting_value("og.description", setting_name, "meta.description"),
                     :image => setting_value("og.image", setting_name),
                     :url => setting_value("og.url", setting_name),
-                    :type => setting_value("og.type", setting_name)
+                    :type => setting_value("og.type", setting_name),
+                    :video => setting_value("og.video", setting_name),
                   },
                   :twitter => {
                     :card => setting_value("twitter.card", setting_name),

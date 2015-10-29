@@ -1,0 +1,32 @@
+<!--=== Content Part ===-->
+<div class="container content">
+
+
+
+
+  <div class="row blog-page">
+        <!-- Left Sidebar -->
+      <div class="col-md-8 md-margin-bottom-40">
+        <% @videos.each do |video| %>
+          <h2><%= link_to(video.title, video_url(video)) -%></h2>
+          <%= render partial: video.source, locals: {video: video} -%>
+          <hr class="margin-bottom-40">
+        <% end %>
+
+
+            <!--Pagination-->
+            <div class="text-center">
+              <%= paginate @videos  %>
+            </div>
+            <!--End Pagination-->
+        </div>
+        <!-- End Left Sidebar -->
+
+        <!-- Right Sidebar -->
+      <div class="col-md-4">
+          <%= render "common/right_section" -%>
+      </div>
+        <!-- End Right Sidebar -->
+    </div><!--/row-->
+</div><!--/container-->
+<!--=== End Content Part ===-->

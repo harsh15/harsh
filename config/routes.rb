@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :blogs
+  resources :videos
   resources :users, only: [:show, :edit, :update]
 
   root to: "home#index", subdomain: false

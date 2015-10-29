@@ -37,6 +37,12 @@
           <li><%= link_to "Home", root_url(:subdomain => false) -%></li>
           <li><%= link_to "Blogs", blogs_url(:subdomain => false) -%></li>
                         <li>
+                          <%= link_to "Videos", videos_url() -%>
+                        </li>            
+                        <li>
+                          <%= link_to "Film Makers", new_user_session_url(subdomain: "movies") -%>
+                        </li>            
+                        <li>
                           <a href="https://www.facebook.com/HarshvardhanPariharPage" target="_blank">
                             <i class="fb rounded-md fa fa-facebook"></i>
                           </a>
@@ -49,9 +55,6 @@
                             <i class="yt rounded-md fa fa-youtube"></i>
                           </a>
                         </li>
-                        <li>
-                          <%= link_to "Movies", new_user_session_url(subdomain: "movies") -%>
-                        </li>            
 
         </ul>
         <% if false %>
