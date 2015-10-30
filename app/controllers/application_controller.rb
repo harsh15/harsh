@@ -32,7 +32,7 @@ class ApplicationController < ActionController::Base
                     :image => setting_value("og.image", setting_name),
                     :url => setting_value("og.url", setting_name),
                     :type => setting_value("og.type", setting_name),
-                    :video => setting_value("og.video", setting_name),
+                    # :video => setting_value("og.video", setting_name),
                   },
                   :twitter => {
                     :card => setting_value("twitter.card", setting_name),
