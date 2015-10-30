@@ -66,5 +66,11 @@ class ApplicationController < ActionController::Base
   def recent_blogs
     @recent_blogs = Blog.recent.limit(4)
   end
+  
+  def recent_videos
+    @recent_videos = Video.recent.limit(4)
+  end
+
+
 
 end

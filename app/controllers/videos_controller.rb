@@ -7,13 +7,13 @@ class VideosController < ApplicationController
   
   def index
     @videos = Video.recent.page(params[:page]).per(10)
-    recent_blogs()
+    recent_videos()
     add_breadcrumb "Videos", videos_path()
   end
 
   def show
     @video = Video.find(params[:id])
-    recent_blogs()
+    recent_videos()
     add_breadcrumb "Video", :videos_path
     add_breadcrumb @video.title, video_path(@video)
   end
